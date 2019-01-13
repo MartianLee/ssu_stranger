@@ -1,5 +1,169 @@
-.page-container
-  = yield
-  %h1 이방인 STRANGER
-  %h3 숭실대학교 퀴어동아리
-  %p
+
+/ Navigation
+%a#menu-toggle.btn.btn-dark.btn-lg.toggle{:href => "#"}
+  %i.fa.fa-bars
+%nav#sidebar-wrapper
+  %ul.sidebar-nav
+    %a#menu-close.btn.btn-light.btn-lg.pull-right.toggle{:href => "#"}
+      %i.fa.fa-times
+    %li.sidebar-brand
+      %a{:href => "#top", :onclick => "$(\"#menu-close\").click();"} Start Bootstrap
+    %li
+      %a{:href => "#top", :onclick => "$(\"#menu-close\").click();"} Home
+    %li
+      %a{:href => "#about", :onclick => "$(\"#menu-close\").click();"} About
+    %li
+      %a{:href => "#services", :onclick => "$(\"#menu-close\").click();"} Services
+    %li
+      %a{:href => "#portfolio", :onclick => "$(\"#menu-close\").click();"} Portfolio
+    %li
+      %a{:href => "#contact", :onclick => "$(\"#menu-close\").click();"} Contact
+/ Header
+%header#top.header
+  .text-vertical-center
+    %h1 STRANGER
+    %h3 숭실대학교 퀴어동아리 이방인
+    %br/
+    %a.btn.btn-dark.btn-lg{:href => "#about"} Find Out More
+/ About
+%section#about.about
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2 Stylish Portfolio is the perfect theme for your next project!
+        %p.lead
+          This theme features some wonderful photography courtesy of
+          = succeed "." do
+            %a{:href => "http://join.deathtothestockphoto.com/", :target => "_blank"} Death to the Stock Photo
+    / /.row
+  / /.container
+/ Services
+/ The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/
+%section#services.services.bg-primary
+  .container
+    .row.text-center
+      .col-lg-10.col-lg-offset-1
+        %h2 Our Services
+        %hr.small/
+        .row
+          .col-md-3.col-sm-6
+            .service-item
+              %span.fa-stack.fa-4x
+                %i.fa.fa-circle.fa-stack-2x
+                %i.fa.fa-cloud.fa-stack-1x.text-primary
+              %h4
+                %strong Service Name
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              %a.btn.btn-light{:href => "#"} Learn More
+          .col-md-3.col-sm-6
+            .service-item
+              %span.fa-stack.fa-4x
+                %i.fa.fa-circle.fa-stack-2x
+                %i.fa.fa-compass.fa-stack-1x.text-primary
+              %h4
+                %strong Service Name
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              %a.btn.btn-light{:href => "#"} Learn More
+          .col-md-3.col-sm-6
+            .service-item
+              %span.fa-stack.fa-4x
+                %i.fa.fa-circle.fa-stack-2x
+                %i.fa.fa-flask.fa-stack-1x.text-primary
+              %h4
+                %strong Service Name
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              %a.btn.btn-light{:href => "#"} Learn More
+          .col-md-3.col-sm-6
+            .service-item
+              %span.fa-stack.fa-4x
+                %i.fa.fa-circle.fa-stack-2x
+                %i.fa.fa-shield.fa-stack-1x.text-primary
+              %h4
+                %strong Service Name
+              %p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              %a.btn.btn-light{:href => "#"} Learn More
+        / /.row (nested)
+      / /.col-lg-10
+    / /.row
+  / /.container
+/ Callout
+%aside.callout
+  .text-vertical-center
+    %h1 Vertically Centered Text
+/ Portfolio
+%section#portfolio.portfolio
+  .container
+    .row
+      .col-lg-10.col-lg-offset-1.text-center
+        %h2 Our Work
+        %hr.small/
+        .row
+          .col-md-6
+            .portfolio-item
+              %a{:href => "#"}
+                = image_tag "portfolio-1.jpg", class: "img-portfolio img-responsive"
+          .col-md-6
+            .portfolio-item
+              %a{:href => "#"}
+                = image_tag "portfolio-2.jpg", class: "img-portfolio img-responsive"
+          .col-md-6
+            .portfolio-item
+              %a{:href => "#"}
+                = image_tag "portfolio-3.jpg", class: "img-portfolio img-responsive"
+          .col-md-6
+            .portfolio-item
+              %a{:href => "#"}
+                = image_tag "portfolio-4.jpg", class: "img-portfolio img-responsive"
+        / /.row (nested)
+        %a.btn.btn-dark{:href => "#"} View More Items
+      / /.col-lg-10
+    / /.row
+  / /.container
+/ Call to Action
+%aside.call-to-action.bg-primary
+  .container
+    .row
+      .col-lg-12.text-center
+        %h3 The buttons below are impossible to resist.
+        %a.btn.btn-lg.btn-light{:href => "#"} Click Me!
+        %a.btn.btn-lg.btn-dark{:href => "#"} Look at Me!
+/ Map
+%section#contact.map
+  %iframe{:frameborder => "0", :height => "100%", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A&output=embed", :width => "100%"}
+  %br/
+  %small
+    %a{:href => "https://maps.google.com/maps?f=q&source=embed&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A"}
+/ Footer
+%footer
+  .container
+    .row
+      .col-lg-10.col-lg-offset-1.text-center
+        %h4
+          %strong Start Bootstrap
+        %p
+          3481 Melrose Place
+          = succeed "Beverly" do
+            %br/
+        %ul.list-unstyled
+          %li
+            %i.fa.fa-phone.fa-fw
+            (123) 456-7890
+          %li
+            %i.fa.fa-envelope-o.fa-fw
+            %a{:href => "mailto:name@example.com"} name@example.com
+        %br/
+        %ul.list-inline
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-facebook.fa-fw.fa-3x
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-twitter.fa-fw.fa-3x
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-dribbble.fa-fw.fa-3x
+        %hr.small/
+        %p.text-muted Copyright © Your Website 2014
+  %a#to-top.btn.btn-dark.btn-lg{:href => "#top"}
+    %i.fa.fa-chevron-up.fa-fw.fa-1x
+
