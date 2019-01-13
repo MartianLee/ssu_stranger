@@ -17,12 +17,6 @@ export MAILTRAP_USERNAME=xx
 export MAILTRAP_PASSWORD=xx
 ```
 
-SMS는 청기와랩을 사용합니다. SMS_SENDER에는 SMS API앱에 등록된 발송대표전화번호 를 넣습니다. 아래 결과값을 SMS_API_AUTH_TOKEN에 넣습니다.
-
-```
-irb> Base64.encode64('청기와 SMS API_ID:청기와 SMS API_KEY').chomp
-```
-
 ## 로컬 개발 환경 구축 방법
 
 기본적인 Rail 개발 환경에 rbenv, pow/powder를 이용합니다.
