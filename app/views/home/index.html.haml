@@ -30,13 +30,19 @@
   .container
     .row
       .col-lg-12.text-center
-        %h2 Stylish Portfolio is the perfect theme for your next project!
-        %p.lead
-          This theme features some wonderful photography courtesy of
-          = succeed "." do
-            %a{:href => "http://join.deathtothestockphoto.com/", :target => "_blank"} Death to the Stock Photo
-    / /.row
-  / /.container
+        %h2 가입하고 싶으신 분은 여기로 연락주세요!
+        %hr.small/
+        %ul.list-inline
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-facebook.fa-fw.fa-3x
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-twitter.fa-fw.fa-3x
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-dribbble.fa-fw.fa-3x
+
 / Services
 / The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/
 %section#services.services.bg-primary
@@ -89,7 +95,8 @@
 / Callout
 %aside.callout
   .text-vertical-center
-    %h1 Vertically Centered Text
+    %h1 STRANGER
+    %h3 Soongsil University Queer Community
 / Portfolio
 %section#portfolio.portfolio
   .container
@@ -101,19 +108,27 @@
           .col-md-6
             .portfolio-item
               %a{:href => "#"}
-                = image_tag "portfolio-1.jpg", class: "img-portfolio img-responsive"
+                = image_tag "work1.jpg", class: "img-portfolio img-responsive"
           .col-md-6
             .portfolio-item
               %a{:href => "#"}
-                = image_tag "portfolio-2.jpg", class: "img-portfolio img-responsive"
+                = image_tag "work2.jpg", class: "img-portfolio img-responsive"
           .col-md-6
             .portfolio-item
               %a{:href => "#"}
-                = image_tag "portfolio-3.jpg", class: "img-portfolio img-responsive"
+                = image_tag "work3.jpg", class: "img-portfolio img-responsive"
           .col-md-6
             .portfolio-item
               %a{:href => "#"}
-                = image_tag "portfolio-4.jpg", class: "img-portfolio img-responsive"
+                = image_tag "work4.jpg", class: "img-portfolio img-responsive"
+          .col-md-6
+            .portfolio-item
+              %a{:href => "#"}
+                = image_tag "work5.jpg", class: "img-portfolio img-responsive"
+          .col-md-6
+            .portfolio-item
+              %a{:href => "#"}
+                = image_tag "work6.jpg", class: "img-portfolio img-responsive"
         / /.row (nested)
         %a.btn.btn-dark{:href => "#"} View More Items
       / /.col-lg-10

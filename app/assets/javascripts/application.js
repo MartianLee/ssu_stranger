@@ -15,7 +15,17 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require scrollreveal
 //= require_tree .
+
+$(function() {
+  ScrollReveal({ duration: 800 });
+  ScrollReveal().reveal('#about', { delay: 100 });
+  ScrollReveal().reveal('#services', { delay: 100 });
+  ScrollReveal().reveal('.callout', { delay: 100 });
+  ScrollReveal().reveal('#portfolio', { delay: 100 });
+  ScrollReveal().reveal('.call-to-action', { delay: 100 });
+});
 
 $("#menu-close").click(function(e) {
     e.preventDefault();
